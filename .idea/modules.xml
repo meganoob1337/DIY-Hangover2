@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DIY-Hangover/DIY-Hangover.iml" filepath="$PROJECT_DIR$/DIY-Hangover/DIY-Hangover.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DIY-Hangover2.iml" filepath="$PROJECT_DIR$/DIY-Hangover2.iml" />
       <module fileurl="file://$PROJECT_DIR$/DIY-HangoverProject.iml" filepath="$PROJECT_DIR$/DIY-HangoverProject.iml" />
     </modules>
   </component>
