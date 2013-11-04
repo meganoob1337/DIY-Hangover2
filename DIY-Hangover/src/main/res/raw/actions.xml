@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actions>
+    <action-array name="p70">
+        <action>
+            <item>Rechts muss trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Links muss trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Gegebüber muss trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Verteile fünf Schlucke!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Es wird 'Kategorie' gespielt!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Es wird 'Ich hab noch nie' gespielt!</item>
+        </action>
+        <action>
+            <item>DAUMEN :)</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Verteile drei Schlucke!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Verteile vier Schlucke!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Verteile zehn Schlucke!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Alle Frauen trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Alle Männer trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Das geschlecht das am wenigsten vertreten, ist trinkt!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Verteile zwei Schlucke!</item>
+        </action>
+        <action>
+            <item>Stelle jemandem eine Frage, die er wahrheitsgemäß beantworten muss!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Du musst zwei Schlucke trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Du musst drei Schlucke trinken!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Du musst zehn Kniebeugen machen (wenn du umfällst, musst du soviele trinken wie du noch hättest machen müssen)!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Du darfst dir zwei Personen aussuchen, die ihre Mischen tauschen müssen!</item>
+        </action>
+    </action-array>
+
+    <action-array name="p20">
+        <action>
+            <item>Suche dir einen Trinkpartner aus (max 3er danach kann man sich von einem Partner lösen)!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Question-Master!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Snake-Master!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>kein 'JA' und 'NEIN' mehr sagen!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Kein 'der', 'die', 'das' mehr :)</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Erstelle eine Regel!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Es darf nicht mehr das Wort 'trinken' benutzt werden!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Es dürfen keine Namen mehr genannt werden!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Imagninäres Männchen vor dem trinken Aktion +1</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Es darf nichtmehr aufs Handy geguckt werden!</item>
+            <tooltip></tooltip>
+        </action>
+    </action-array>
+
+    <action-array name="p10">
+        <action>
+            <item>Solltest du Graß haben -> Baue einen</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Du musst Exen!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Ziehe ein Kleidungsstück aus!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Alle Raucher müssen dir eine Kippe geben!</item>
+            <tooltip></tooltip>
+        </action>
+        <action>
+            <item>Fülle die Teufelsmische um 1/4 auf (wenn du sie vollmachst -> trink sie aus)!</item>
+            <tooltip></tooltip>
+        </action>
+    </action-array>
+</actions>
