@@ -66,7 +66,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addSpieler() {
+        if (!userName.getText().toString().equals(""))
+        {
+
         userList.add(userName.getText().toString());
+        }
         updateView();
 
     }
