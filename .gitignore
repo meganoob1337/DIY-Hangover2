@@ -1,4 +1,50 @@
-.gradle
-/local.properties
-/.idea/workspace.xml
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pdf
+*.apk
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.db
+*.log
+*.aux
+*~
+*.swp
+
+# OS generated files #
+######################
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+Icon?
+ehthumb.db
+Thumbs.db
+.directory
+
+# IDE generated Files #
+#######################
+.idea
+.settings
+.classpath
+.project
+*.iml
+*.komodoproject
+gradle
+.properties
