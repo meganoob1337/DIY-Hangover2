@@ -47,3 +47,4 @@ Thumbs.db
 *.iml
 *.komodoproject
 gradle
+build
