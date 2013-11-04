@@ -15,6 +15,7 @@ public class Game {
     private String mCurrentAction;
 
 
+
     public Game(ArrayList<String> users, String[] actions70, String[] actions20, String[] actions10)
     {
         mUsers = users;

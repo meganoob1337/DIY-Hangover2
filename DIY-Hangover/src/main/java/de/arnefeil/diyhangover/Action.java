@@ -6,7 +6,13 @@ package de.arnefeil.diyhangover;
 public class Action {
     private String mName;
     private String mTooltip;
-    private int mCounting = 0;
+    private int mCounting;
+
+    public Action(String name, String tooltip) {
+        mName = name;
+        mTooltip = tooltip;
+        mCounting = 0;
+    }
 
     public void setName(String name) {
         mName = name;

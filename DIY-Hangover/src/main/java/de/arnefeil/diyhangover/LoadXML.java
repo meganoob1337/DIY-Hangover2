@@ -21,35 +21,95 @@ import java.util.List;
  */
 public class LoadXML {
 
-    private Context mContext;
 
-    public LoadXML(Context context) {
-        mContext = context;
+
+    public LoadXML() {
+
     }
 
-    public List parse(InputStream is) throws Exception {
+    public ArrayList<Action>[] parse(InputStream is) throws Exception {
         try {
 
         XmlPullParser parser = Xml.newPullParser();
         parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
         parser.setInput(is, null);
         parser.nextTag();
-            return readFeed(parser);
+        return readFeed(parser);
         } finally {
             is.close();
         }
 
     }
 
-    private List readFeed(XmlPullParser parser) throws XmlPullParserException, IOException {
-        List entries = new ArrayList();
+    private ArrayList<Action>[] readFeed(XmlPullParser parser) throws XmlPullParserException, IOException {
+        ArrayList<Action> actions_p70 = new ArrayList<Action>();
+        ArrayList<Action> actions_p20 = new ArrayList<Action>();
+        ArrayList<Action> actions_p10 = new ArrayList<Action>();
         parser.require(XmlPullParser.START_TAG, null, "actions");
         while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
             String name = parser.getName();
+            if (name.equals("actions-p70")) {
 
+                actions_p70.add(readAction(parser));
+            }
+            if (name.equals("actions-p20")) {
+
+                actions_p20.add(readAction(parser));
+            }
+            if (name.equals("actions-p10")) {
+
+                actions_p10.add(readAction(parser));
+            }
         }
 
-        return entries;
+        ArrayList<Action>[] actions = new ArrayList[3];
+        actions[0] = actions_p70;
+        actions[1] = actions_p20;
+        actions[2] = actions_p10;
+
+        return actions;
     }
 
+    private Action readAction(XmlPullParser parser) throws XmlPullParserException, IOException {
+        //parser.require(XmlPullParser.START_TAG, null, "action");
+        String item = null;
+        String tooltip = null;
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String name = parser.getName();
+            if (name.equals("item"))
+                item = readItem(parser);
+            if (name.equals("tooltip"))
+                tooltip = readTooltip(parser);
+        }
+        return new Action(item, tooltip);
+    }
+
+    private String readItem(XmlPullParser parser) throws IOException, XmlPullParserException {
+        parser.require(XmlPullParser.START_TAG, null, "item");
+        String item = readText(parser);
+        parser.require(XmlPullParser.END_TAG, null, "item");
+        return item;
+    }
+
+    private String readTooltip(XmlPullParser parser) throws IOException, XmlPullParserException {
+        parser.require(XmlPullParser.START_TAG, null, "tooltip");
+        String tooltip = readText(parser);
+        parser.require(XmlPullParser.END_TAG, null, "tooltip");
+        return tooltip;
+    }
+
+    private String readText(XmlPullParser parser) throws IOException, XmlPullParserException {
+        String result = "";
+        if (parser.next() == XmlPullParser.TEXT) {
+            result = parser.getText();
+            parser.next();
+        }
+        return result;
+    }
 }

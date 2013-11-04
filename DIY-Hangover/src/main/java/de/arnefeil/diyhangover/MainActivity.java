@@ -1,19 +1,16 @@
 package de.arnefeil.diyhangover;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class MainActivity extends ActionBarActivity {
@@ -28,29 +25,19 @@ public class MainActivity extends ActionBarActivity {
         userName = (EditText)findViewById(R.id.et_name);
         users = (TextView)findViewById(R.id.tv_names);
         userList = new ArrayList<String>();
-
-
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                return true;
+        /*LoadXML xml = new LoadXML();
+        InputStream is = getResources().openRawResource(R.raw.actions);
+        try {
+        ArrayList[] actions = xml.parse(is);
+            Log.v("MainActivity", "Actions:");
+        for(Object o : actions[2]) {
+            Action ac = (Action) o;
+            Log.v("MainActivity", ac.getName());
         }
-        return super.onOptionsItemSelected(item);
+
+        } catch (Exception e) {
+            Log.e("MainActivity", e.getMessage());
+        }*/
     }
 
 
@@ -60,30 +47,34 @@ public class MainActivity extends ActionBarActivity {
         {
             case R.id.btn_add: addSpieler(); break;
             case R.id.btn_start: startGame(); break;
-
-
+            case R.id.et_name: userName.setError(null); break;
         }
     }
 
     private void addSpieler() {
         if (!userName.getText().toString().equals(""))
-        {
-
-        userList.add(userName.getText().toString());
+        {   userName.setError(null);
+            userList.add(userName.getText().toString());
+            updateView();
+        } else {
+            userName.setError("keine Name angegeben!");
         }
-        updateView();
+
+
 
     }
 
     private void updateView() {
-        String user = "";
-        for(String s : userList)
-        {
-            user += s+ "\n";
+        if (userList.size() > 0) {
+            String user = "";
+            for(String s : userList)
+            {
+                user += s+ "\n";
 
+            }
+            userName.setText("");
+            users.setText(user);
         }
-        userName.setText("");
-        users.setText(user);
 
     }
 

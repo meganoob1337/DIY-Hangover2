@@ -1,16 +1,9 @@
 package de.arnefeil.diyhangover;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,7 +18,7 @@ public class GameActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ArrayList<String> users = getIntent().getStringArrayListExtra("users");
         String[] actions70 = getResources().getStringArray(R.array.p70);
         String[] actions20 = getResources().getStringArray(R.array.p20);
@@ -47,5 +40,18 @@ public class GameActivity extends ActionBarActivity {
     public void onClick(View btn) {
         mGame.next();
         updateView();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
