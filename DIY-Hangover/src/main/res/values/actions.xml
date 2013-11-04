@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="p70">
+    <item>Rechts Muss Trinken</item>
+    <item>Links Muss Trinken</item>
+    <item>Gegenüber Muss Trinken</item>
+    <item>Verteile 5 Schlücke</item>
+    <item>Es wird Kategorie gespielt</item>
+    <item>Es wird Ich hab noch nie Gespielt</item>
+    <item>DAUMEN :)</item>
+    <item>Verteile 3 Schlücke</item>
+    <item>Verteile 4 Schlücke</item>
+    <item>Verteile 10 Schlücke</item>
+    <item>Alle Frauen trinken</item>
+    <item>Alle Männer trinken</item>
+    <item>Das geschlecht das am wenigsten vertreten ist trinkt!</item>
+    <item>Verteile 2 Schlücke</item>
+    <item>Stelle Jemandem eine Frage die er wahrheitsgemäß beantworten muss!</item>
+    <item>Du musst 2 Schlücke trinken</item>
+    <item>Du musst 3 Schlücke trinken</item>
+    <item>Du musst 10 Kniebeugen machen (wenn du umfällst musst du soviele trinken wie du noch hättest machen müssen)</item>
+    <item>Du darfst dir 2 personen aussuchen die ihre mischen Tauschen müssen</item>
+</string-array>
+
+<string-array name="p20">
+    <item>Suche dir einen Trinkpartner aus (max 3er danach kann man sich von einem Partner Lösen)</item>
+    <item>Question-Master</item>
+    <item>Snake-Master</item>
+    <item>kein JA und NEin mehr sagen</item>
+    <item>Kein "der" "die" "das" mehr :)</item>
+    <item>Erstelle eine Regel!</item>
+    <item>Es darf nicht mehr das Wort "Trinken" benutzt werden</item>
+    <item>Es dürfen keine Namen mehr genannt werden</item>
+    <item>Imagninäres Männchen vor dem trinken Aktion +1</item>
+    <item>Es darf nichtmehr aufs Handy geguckt werden</item>
+</string-array>
+
+    <string-array name="p10">
+        <item>Solltest du Graß haben -> Baue einen</item>
+        <item>Du musst Exen!</item>
+        <item>Ziehe ein Kleidungsstück aus</item>
+        <item>Alle Raucher müssen dir eine Kippe geben</item>
+        <item>Fülle die TeufelsMische um 1/4 auf (wenn du sie vollmachst -> trink sie aus)</item>
+    </string-array>
+</resources>
