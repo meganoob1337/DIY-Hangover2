@@ -2,6 +2,7 @@ package de.arnefeil.diyhangover;
 
 import android.content.Context;
 import android.content.res.XmlResourceParser;
+import android.util.Log;
 import android.util.Xml;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -52,16 +53,13 @@ public class LoadXML {
             }
             String name = parser.getName();
             if (name.equals("actions-p70")) {
-
-                actions_p70.add(readAction(parser));
+                actions_p70.add(readAction(parser, "actions-p70"));
             }
-            if (name.equals("actions-p20")) {
-
-                actions_p20.add(readAction(parser));
+            else if (name.equals("actions-p20")) {
+                actions_p20.add(readAction(parser, "actions-p20"));
             }
-            if (name.equals("actions-p10")) {
-
-                actions_p10.add(readAction(parser));
+            else if (name.equals("actions-p10")) {
+                actions_p10.add(readAction(parser, "actions-p10"));
             }
         }
 
@@ -73,8 +71,8 @@ public class LoadXML {
         return actions;
     }
 
-    private Action readAction(XmlPullParser parser) throws XmlPullParserException, IOException {
-        //parser.require(XmlPullParser.START_TAG, null, "action");
+    private Action readAction(XmlPullParser parser, String start_tag) throws XmlPullParserException, IOException {
+        parser.require(XmlPullParser.START_TAG, null, start_tag);
         String item = null;
         String tooltip = null;
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -84,7 +82,7 @@ public class LoadXML {
             String name = parser.getName();
             if (name.equals("item"))
                 item = readItem(parser);
-            if (name.equals("tooltip"))
+            else if (name.equals("tooltip"))
                 tooltip = readTooltip(parser);
         }
         return new Action(item, tooltip);
@@ -108,7 +106,7 @@ public class LoadXML {
         String result = "";
         if (parser.next() == XmlPullParser.TEXT) {
             result = parser.getText();
-            parser.next();
+            parser.nextTag();
         }
         return result;
     }

@@ -25,19 +25,20 @@ public class MainActivity extends ActionBarActivity {
         userName = (EditText)findViewById(R.id.et_name);
         users = (TextView)findViewById(R.id.tv_names);
         userList = new ArrayList<String>();
-        /*LoadXML xml = new LoadXML();
+        LoadXML xml = new LoadXML();
         InputStream is = getResources().openRawResource(R.raw.actions);
         try {
         ArrayList[] actions = xml.parse(is);
-            Log.v("MainActivity", "Actions:");
-        for(Object o : actions[2]) {
+            Log.v("MainActivity", "Actions:" + actions[0].size());
+        for(Object o : actions[0]) {
             Action ac = (Action) o;
-            Log.v("MainActivity", ac.getName());
+
+            Log.v("MainActivity", ac.getName() + "\n" + ac.getTooltip());
         }
 
         } catch (Exception e) {
             Log.e("MainActivity", e.getMessage());
-        }*/
+        }
     }
 
 
