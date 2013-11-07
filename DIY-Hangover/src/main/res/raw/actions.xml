@@ -3,7 +3,7 @@
     <actions-p70>
         <action>
             <item>Rechts muss trinken!</item>
-            <tooltip></tooltip>
+            <tooltip>test</tooltip>
         </action>
         <action>
             <item>Links muss trinken!</item>
