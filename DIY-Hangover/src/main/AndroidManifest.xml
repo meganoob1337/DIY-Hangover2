@@ -16,8 +16,8 @@
         <activity
             android:name="de.arnefeil.diyhangover.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustResize"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +28,10 @@
             android:name="de.arnefeil.diyhangover.GameActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_game" >
+        </activity>
+        <activity
+            android:name=".TooltipActivity"
+            android:label="@string/title_activity_tooltip" >
         </activity>
     </application>
 

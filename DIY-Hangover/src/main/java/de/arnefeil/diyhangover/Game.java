@@ -53,6 +53,7 @@ public class Game {
     {
         return mCurrentAction;
     }
+
     public String getCurrentPlayer()
     {
         return mUsers.get(mCurrentPlayer) + ":";

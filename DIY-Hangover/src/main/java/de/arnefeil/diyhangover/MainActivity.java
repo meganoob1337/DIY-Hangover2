@@ -49,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
             case R.id.btn_add: addSpieler(); break;
             case R.id.btn_start: startGame(); break;
             case R.id.et_name: userName.setError(null); break;
+
         }
     }
 

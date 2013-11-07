@@ -1,5 +1,6 @@
 package de.arnefeil.diyhangover;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,6 +14,7 @@ public class GameActivity extends ActionBarActivity {
     private Game mGame;
     private TextView mCurrentUser;
     private TextView mCurrentAction;
+    private TooltipActivity mTooltip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +38,22 @@ public class GameActivity extends ActionBarActivity {
         mCurrentAction.setText(mGame.getCurrentAction());
         mCurrentUser.setText(mGame.getCurrentPlayer());
     }
+    private void startTooltip() {
+        Intent tooltip  = new Intent(this, TooltipActivity.class);
+      //  tooltip.putExtra("tooltip", mGame.getCurrentAction().getTooltip());
+        tooltip.putExtra("tooltip","dummytooltip");
+                startActivity(tooltip);
+    }
 
     public void onClick(View btn) {
-        mGame.next();
+    switch(btn.getId())
+        {
+            case R.id.button: mGame.next(); break;
+            case R.id.btn_tooltip: this.startTooltip(); break;
+
+
+        }
+
         updateView();
     }
 
