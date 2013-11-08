@@ -10,15 +10,16 @@ import java.util.List;
  */
 public class Game {
     private ArrayList<String> mUsers;
-    private List<Action> mActions70;
-    private List<Action> mActions20;
-    private List<Action> mActions10;
+    private ArrayList<Action> mActions70;
+    private ArrayList<Action> mActions20;
+    private ArrayList<Action> mActions10;
     private int mCurrentPlayer;
     private Action mCurrentAction;
 
 
 
-    public Game(ArrayList<String> users, List<Action> actions70, List<Action> actions20, List<Action> actions10)
+    public Game(ArrayList<String> users, ArrayList<Action> actions70, ArrayList<Action> actions20,
+                ArrayList<Action> actions10)
     {
         mUsers = users;
         mActions70 = actions70;

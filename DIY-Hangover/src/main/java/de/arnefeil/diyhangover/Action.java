@@ -7,15 +7,6 @@ public class Action {
     private String mName;
     private String mTooltip;
     private int mCounting;
-    private String mProzent;
-
-    public Action() {
-        mName = "";
-        mProzent = "";
-        mTooltip = "";
-        mCounting = 0;
-
-    }
 
     public void setName(String name) {
         mName = name;
@@ -23,17 +14,19 @@ public class Action {
     public void setTooltip(String tooltip) {
         mTooltip = tooltip;
     }
-    public void setProzent(String prozent) {mProzent = prozent;}
+
+
     public void increaseCounting() {
         mCounting++;
     }
 
+    public boolean hasTooltip() {
 
+        return !(mTooltip.replace(" ", "").length() == 0);
+    }
     public String getName() {
         return mName;
     }
-    public int getProzent(){return Integer.parseInt(mProzent)
-            ;}
     public String getTooltip() {
         return mTooltip;
     }
