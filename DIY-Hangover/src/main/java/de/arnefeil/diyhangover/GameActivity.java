@@ -14,6 +14,7 @@ public class GameActivity extends ActionBarActivity {
     private Game mGame;
     private TextView mCurrentUser;
     private TextView mCurrentAction;
+
     private TooltipActivity mTooltip;
 
     @Override
@@ -35,12 +36,12 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void updateView() {
-        mCurrentAction.setText(mGame.getCurrentAction());
+        mCurrentAction.setText(mGame.getCurrentAction().getName());
         mCurrentUser.setText(mGame.getCurrentPlayer());
     }
     private void startTooltip() {
         Intent tooltip  = new Intent(this, TooltipActivity.class);
-        String b  = "bla123";
+        String b  = mGame.getCurrentAction().getTooltip();
         // TODO ue bergeben vom tooltib  und dann wird er angezeigt ;D  
       //  tooltip.putExtra("tooltip", mGame.getCurrentAction().getTooltip());
          tooltip.putExtra("tooltip",b);

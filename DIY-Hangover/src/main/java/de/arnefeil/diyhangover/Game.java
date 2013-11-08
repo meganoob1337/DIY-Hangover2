@@ -2,21 +2,23 @@ package de.arnefeil.diyhangover;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.List;
+
 
 /**
  * Created by Andrei on 01.11.13.
  */
 public class Game {
     private ArrayList<String> mUsers;
-    private String[] mActions70;
-    private String[] mActions20;
-    private String[] mActions10;
+    private List<Action> mActions70;
+    private List<Action> mActions20;
+    private List<Action> mActions10;
     private int mCurrentPlayer;
-    private String mCurrentAction;
+    private Action mCurrentAction;
 
 
 
-    public Game(ArrayList<String> users, String[] actions70, String[] actions20, String[] actions10)
+    public Game(ArrayList<String> users, List<Action> actions70, List<Action> actions20, List<Action> actions10)
     {
         mUsers = users;
         mActions70 = actions70;
@@ -33,22 +35,22 @@ public class Game {
         int a = rnd.nextInt(99);
        if(a<10)
        {
-           mCurrentAction = mActions10[rnd.nextInt(mActions10.length-1)];
+           mCurrentAction = mActions10.get(rnd.nextInt(mActions10.size()-1));
        }
         if(9<a && a<30)
         {
-            mCurrentAction = mActions20[rnd.nextInt(mActions20.length-1)];
+            mCurrentAction = mActions20.get(rnd.nextInt(mActions20.size()-1));
         }
         if(29<a && a< 100)
 
             {
-                mCurrentAction = mActions70[rnd.nextInt(mActions70.length-1)];
+                mCurrentAction = mActions70.get(rnd.nextInt(mActions70.size()-1));
             }
 
         mCurrentPlayer = (++mCurrentPlayer)%(mUsers.size());
     }
 
-    public String getCurrentAction()
+    public Action getCurrentAction()
 
     {
         return mCurrentAction;
