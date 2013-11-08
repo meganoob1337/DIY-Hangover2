@@ -40,8 +40,10 @@ public class GameActivity extends ActionBarActivity {
     }
     private void startTooltip() {
         Intent tooltip  = new Intent(this, TooltipActivity.class);
+        String b  = "bla123";
+        // TODO ue bergeben vom tooltib  und dann wird er angezeigt ;D  
       //  tooltip.putExtra("tooltip", mGame.getCurrentAction().getTooltip());
-        tooltip.putExtra("tooltip","dummytooltip");
+         tooltip.putExtra("tooltip",b);
                 startActivity(tooltip);
     }
 
@@ -49,7 +51,7 @@ public class GameActivity extends ActionBarActivity {
     switch(btn.getId())
         {
             case R.id.button: mGame.next(); break;
-            case R.id.btn_tooltip: this.startTooltip(); break;
+            case R.id.btn_tooltip: startTooltip(); break;
 
 
         }

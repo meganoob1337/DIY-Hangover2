@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Beschreibung"
         android:id="@+id/btn_tooltip"
+        android:onClick="onClick"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true" />
 
