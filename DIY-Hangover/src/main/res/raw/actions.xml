@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <actions>
-    <actions-p70>
+    <action-list name="p70">
         <action>
             <item>Rechts muss trinken!</item>
             <tooltip>test</tooltip>
@@ -74,9 +74,9 @@
         <action>
             <item>Du darfst dir zwei Personen aussuchen, die ihre Mischen tauschen müssen!</item>
         </action>
-    </actions-p70>
+    </action-list>
 
-    <actions-p20>
+    <action-list name="p20">
         <action>
             <item>Suche dir einen Trinkpartner aus (max 3er danach kann man sich von einem Partner lösen)!</item>
             <tooltip></tooltip>
@@ -117,9 +117,9 @@
             <item>Es darf nichtmehr aufs Handy geguckt werden!</item>
             <tooltip></tooltip>
         </action>
-    </actions-p20>
+    </action-list>
 
-    <actions-p10>
+    <action-list name="p10">
         <action>
             <item>Solltest du Graß haben -> Baue einen</item>
             <tooltip></tooltip>
@@ -140,5 +140,5 @@
             <item>Fülle die Teufelsmische um 1/4 auf (wenn du sie vollmachst -> trink sie aus)!</item>
             <tooltip></tooltip>
         </action>
-    </actions-p10>
+    </action-list>
 </actions>
