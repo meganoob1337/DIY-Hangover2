@@ -1,183 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <actions>
-    <action-list name="p70">
-        <action>
+        <action prozent="70">
             <item>Rechts muss trinken!</item>
             <tooltip>test</tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Links muss trinken!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Gegebüber muss trinken!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Verteile fünf Schlucke!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Es wird 'Kategorie' gespielt!</item>
             <tooltip>Der aktive Spieler nennt eine Kategorie. daraufhin muss man reihum etwas aus dieser Kategorie sagen , bis einer etwas doppelt sagt oder nichts mehr weis. z.B. Automarken</tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Es wird 'Ich hab noch nie' gespielt!</item>
             <tooltip>Der aktive Spieler sagt eine Sache die er noch nie bzw. schon mal gemacht hat, und alle Spieler in der Runde  die die Sache schonmal gemacht haben, bzw noch nie , müssen trinken</tooltip>
-            <prozent>70</prozent>
-
         </action>
-        <action>
+        <action prozent="70">
             <item>DAUMEN :)</item>
             <tooltip>Der Aktive Spieler darf irgendwann den Daumen auf den Tisch legen , der Spieler der es ihm als letztes nachtut, muss trinken</tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Verteile drei Schlucke!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Verteile vier Schlucke!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Verteile zehn Schlucke!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Alle Frauen trinken!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Alle Männer trinken!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Das geschlecht das am wenigsten vertreten, ist trinkt!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Verteile zwei Schlucke!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
-
         </action>
-        <action>
+        <action prozent="70">
             <item>Stelle jemandem eine Frage, die er wahrheitsgemäß beantworten muss!</item>
             <tooltip>Sollte der Spieler nicht antworten wollen, darf er alternativ auch sein Glas exen oder ein Kleidungsstück ausziehen </tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Du musst zwei Schlucke trinken!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Du musst drei Schlucke trinken!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Du musst zehn Kniebeugen machen (wenn du umfällst, musst du soviele trinken wie du noch hättest machen müssen)!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-        <action>
+        <action prozent="70">
             <item>Du darfst dir zwei Personen aussuchen, die ihre Mischen tauschen müssen!</item>
             <tooltip></tooltip>
-            <prozent>70</prozent>
         </action>
-    </action-list>
 
-    <action-list name="p20">
-        <action>
+
+
+        <action prozent="20">
             <item>Suche dir einen Trinkpartner aus !</item>
             <tooltip>Sobald man in einem Team mit jemandem ist, muss wenn jemand aus dem Team trinken muss , jedes Teammitglied die gleiche menge an Schlücken nehmen. Sollte man dazu gezwungen sein ein Team aus mehr als 3 Spielern zu bilden , darf man einen Spieler entfernen, so das maximal 3 Spieler zusammen im Team sind.</tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Question-Master!</item>
             <tooltip>Der Aktive Spieler ist jetzt Question Master. Ihm dürfen keine Fragen mehr beantwortet werden, sonst muss man trinken. Wenn der Question Master eine Frage stellt , kann man "Fick dich Questionmaster" sagen um  ihn Trinken zu lassen.</tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Snake-Master!</item>
             <tooltip>Der Aktive Spieler wird Snake-Master. Wenn ein Spieler ihm in die Augen guckt muss dieser Trinken. </tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>kein 'JA' und 'NEIN' mehr sagen!</item>
             <tooltip>Wenn Ja oder Nein gesagt wird , muss der Spieler trinken </tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Kein 'der', 'die', 'das' mehr :)</item>
             <tooltip>Beim benutzen eines Artikels muss der Spieler trinken.</tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Erstelle eine Regel!</item>
             <tooltip>Der Aktive Spieler darf eine Regel erstellen, bei deren nichteinhaltung getrunken werden muss</tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Es darf nicht mehr das Wort 'trinken' benutzt werden!</item>
             <tooltip>Wer Trinken sagt, muss trinken</tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Es dürfen keine Namen mehr genannt werden!</item>
             <tooltip>Wer einen Na01men sagt, muss trinken</tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Imagninäres Männchen vor dem trinken Aktion +1</item>
             <tooltip>Der Aktive Spieler denkt sich eine Aktion aus die man mit dem Imaginären Männchen machen muss bevor man einen Schluck trinkt.(z.B. Es auf das Glas setzen ) Wenn man es vergisst , bzw die Reihenfolge durcheinander bringt, muss man die Schlücke die man trinken musste, erneut nehmen </tooltip>
-            <prozent>20</prozent>
         </action>
-        <action>
+        <action prozent="20">
             <item>Es darf nichtmehr aufs Handy geguckt werden!</item>
             <tooltip>Wer auf sein Handy guckt , muss Trinken. Ausser natürlich der Spieler der diese App auf seinem Handy hat, sollte er die App beenden bzw in den Hintergrund verschieben gilt diese Regel auch für ihn.</tooltip>
-            <prozent>20</prozent>
         </action>
-    </action-list>
 
-    <action-list name="p10">
-        <action>
+        <action prozent="10">
             <item>Solltest du Graß haben -> Baue einen</item>
             <tooltip></tooltip>
-            <prozent>10</prozent>
         </action>
-        <action>
+        <action prozent="10">
             <item>Du musst Exen!</item>
             <tooltip></tooltip>
-            <prozent>10</prozent>
         </action>
-        <action>
+        <action prozent="10">
             <item>Ziehe ein Kleidungsstück aus!</item>
             <tooltip></tooltip>
-            <prozent>10</prozent>
         </action>
-        <action>
+        <action prozent="10">
             <item>Alle Raucher müssen dir eine Kippe geben!</item>
             <tooltip></tooltip>
-            <prozent>10</prozent>
         </action>
-        <action>
+        <action prozent="10">
             <item>Fülle die Teufelsmische um 1/4 auf !</item>
             <tooltip>Stellt ein Leeres Glas in die mitte und jedesmal wenn diese Aktion kommt, muss der Aktive Spieler das Glas um ein viertel auffüllen. Der vierte Spieler der diese Aktion bekommt muss das Glas austrinken.</tooltip>
-            <prozent>10</prozent>
         </action>
-    </action-list>
+
 </actions>
