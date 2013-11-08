@@ -8,22 +8,22 @@ public class Action {
     private String mTooltip;
     private int mCounting;
 
-    public Action(String name, String tooltip) {
-        mName = name;
-        mTooltip = tooltip;
-        mCounting = 0;
-    }
-
     public void setName(String name) {
         mName = name;
     }
     public void setTooltip(String tooltip) {
         mTooltip = tooltip;
     }
+
+
     public void increaseCounting() {
         mCounting++;
     }
 
+    public boolean hasTooltip() {
+
+        return !(mTooltip.replace(" ", "").length() == 0);
+    }
     public String getName() {
         return mName;
     }
@@ -33,5 +33,4 @@ public class Action {
     public int getCounting() {
         return mCounting;
     }
-
 }

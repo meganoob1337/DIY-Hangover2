@@ -3,10 +3,15 @@ package de.arnefeil.diyhangover;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class GameActivity extends ActionBarActivity {
@@ -14,7 +19,9 @@ public class GameActivity extends ActionBarActivity {
     private Game mGame;
     private TextView mCurrentUser;
     private TextView mCurrentAction;
-    private TooltipActivity mTooltip;
+    private ImageView mBtnTooltip;
+
+    //private TooltipActivity mTooltip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,41 +29,54 @@ public class GameActivity extends ActionBarActivity {
         setContentView(R.layout.activity_game);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ArrayList<String> users = getIntent().getStringArrayListExtra("users");
-        String[] actions70 = getResources().getStringArray(R.array.p70);
-        String[] actions20 = getResources().getStringArray(R.array.p20);
-        String[] actions10 = getResources().getStringArray(R.array.p10);
-
-        mGame = new Game(users, actions70, actions20, actions10);
+        InputStream is = getResources().openRawResource(R.raw.actions);
+        MySAXParser parser = new MySAXParser(is);
+        mGame = new Game(users, parser.getmActionList70(),
+                parser.getmActionList20(),
+                parser.getmActionList10());
 
         mCurrentUser = (TextView) findViewById(R.id.tv_user);
         mCurrentAction = (TextView) findViewById(R.id.tv_action);
+        mBtnTooltip = (ImageView) findViewById(R.id.btn_tooltip);
 
         updateView();
     }
 
     public void updateView() {
-        mCurrentAction.setText(mGame.getCurrentAction());
+        mCurrentAction.setText(mGame.getCurrentAction().getName());
         mCurrentUser.setText(mGame.getCurrentPlayer());
+        Log.v("GameActivity", "" + mGame.getCurrentAction().hasTooltip());
+        if (mGame.getCurrentAction().hasTooltip()) {
+            mBtnTooltip.setVisibility(View.VISIBLE);
+            //mBtnTooltip.setText("has tooltip");
+        } else {
+            mBtnTooltip.setVisibility(View.GONE);
+            //mBtnTooltip.setText("hasnt tooltip");
+        }
     }
     private void startTooltip() {
-        Intent tooltip  = new Intent(this, TooltipActivity.class);
-        String b  = "bla123";
+       /* Intent tooltip  = new Intent(this, TooltipActivity.class);
+        String b  = mGame.getCurrentAction().getTooltip();
         // TODO ue bergeben vom tooltib  und dann wird er angezeigt ;D  
       //  tooltip.putExtra("tooltip", mGame.getCurrentAction().getTooltip());
          tooltip.putExtra("tooltip",b);
-                startActivity(tooltip);
+                startActivity(tooltip);*/
+        Toast.makeText(this, mGame.getCurrentAction().getTooltip(), Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(View btn) {
     switch(btn.getId())
         {
-            case R.id.button: mGame.next(); break;
-            case R.id.btn_tooltip: startTooltip(); break;
-
-
+            case R.id.button:
+                mGame.next();
+                updateView();
+                break;
+            case R.id.btn_tooltip:
+                startTooltip();
+                break;
         }
 
-        updateView();
+
     }
 
     @Override
