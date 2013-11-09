@@ -61,6 +61,7 @@ public class GameActivity extends ActionBarActivity {
         AlertDialog.Builder tooltip = new AlertDialog.Builder(this);
         tooltip.setMessage(mGame.getCurrentAction().getTooltip());
         tooltip.setCancelable(true);
+        tooltip.setPositiveButton("Schließen", null);
         tooltip.show();
     }
 
