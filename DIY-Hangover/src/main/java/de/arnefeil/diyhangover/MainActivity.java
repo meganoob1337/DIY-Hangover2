@@ -1,14 +1,18 @@
 package de.arnefeil.diyhangover;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -16,15 +20,18 @@ import java.util.ArrayList;
 public class MainActivity extends ActionBarActivity {
 
     private EditText userName;
-    private TextView users;
     private ArrayList<String> userList;
+    private ArrayAdapter<String> mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         userName = (EditText)findViewById(R.id.et_name);
-        users = (TextView)findViewById(R.id.tv_names);
+
         userList = new ArrayList<String>();
+        mAdapter = new UserListAdapter(this, R.layout.listitem_user, userList);
+        ListView userListView = (ListView) findViewById(R.id.lv_users);
+        userListView.setAdapter(mAdapter);
     }
 
 
@@ -45,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
             userList.add(userName.getText().toString());
             updateView();
         } else {
-            userName.setError("keine Name angegeben!");
+            userName.setError(getString(R.string.error_no_name));
         }
 
 
@@ -53,17 +60,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void updateView() {
-        if (userList.size() > 0) {
-            String user = "";
-            for(String s : userList)
-            {
-                user += s+ "\n";
-
-            }
-            userName.setText("");
-            users.setText(user);
-        }
-
+        userName.setText("");
+        mAdapter.notifyDataSetChanged();
     }
 
     private void startGame() {

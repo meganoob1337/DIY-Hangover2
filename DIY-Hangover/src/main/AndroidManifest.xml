@@ -29,10 +29,6 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_game" >
         </activity>
-        <activity
-            android:name=".TooltipActivity"
-            android:label="@string/title_activity_tooltip" >
-        </activity>
     </application>
 
 </manifest>
