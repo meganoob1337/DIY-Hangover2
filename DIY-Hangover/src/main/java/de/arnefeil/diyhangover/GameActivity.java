@@ -1,5 +1,7 @@
 package de.arnefeil.diyhangover;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -31,9 +33,13 @@ public class GameActivity extends ActionBarActivity {
         ArrayList<String> users = getIntent().getStringArrayListExtra("users");
         InputStream is = getResources().openRawResource(R.raw.actions);
         MySAXParser parser = new MySAXParser(is);
+        Log.v("GameActivity", ""+parser.getmActionList70().size());
+        Log.v("GameActivity", ""+parser.getmActionList20().size());
+        Log.v("GameActivity", ""+parser.getmActionList10().size());
         mGame = new Game(users, parser.getmActionList70(),
                 parser.getmActionList20(),
                 parser.getmActionList10());
+
 
         mCurrentUser = (TextView) findViewById(R.id.tv_user);
         mCurrentAction = (TextView) findViewById(R.id.tv_action);
@@ -45,7 +51,6 @@ public class GameActivity extends ActionBarActivity {
     public void updateView() {
         mCurrentAction.setText(mGame.getCurrentAction().getName());
         mCurrentUser.setText(mGame.getCurrentPlayer());
-        Log.v("GameActivity", "" + mGame.getCurrentAction().hasTooltip());
         if (mGame.getCurrentAction().hasTooltip()) {
             mBtnTooltip.setVisibility(View.VISIBLE);
             //mBtnTooltip.setText("has tooltip");
@@ -61,7 +66,12 @@ public class GameActivity extends ActionBarActivity {
       //  tooltip.putExtra("tooltip", mGame.getCurrentAction().getTooltip());
          tooltip.putExtra("tooltip",b);
                 startActivity(tooltip);*/
-        Toast.makeText(this, mGame.getCurrentAction().getTooltip(), Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder tooltip = new AlertDialog.Builder(this);
+        tooltip.setMessage(mGame.getCurrentAction().getTooltip());
+        tooltip.setPositiveButton("Schließen", null);
+        tooltip.show();
+
+        //Toast.makeText(this, mGame.getCurrentAction().getTooltip(), Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(View btn) {

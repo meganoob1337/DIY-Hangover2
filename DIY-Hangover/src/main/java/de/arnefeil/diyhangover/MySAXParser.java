@@ -1,13 +1,9 @@
 package de.arnefeil.diyhangover;
 
-import org.xml.sax.InputSource;
 import org.xml.sax.helpers.DefaultHandler;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.ParseException;
- import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -15,16 +11,16 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
-import java.util.List;
 
 /**
  * Created by arnefeil on 07.11.13.
  */
 public class MySAXParser extends DefaultHandler {
 
+    private static final String ACTIONS = "actions";
+    private static final String CHANCE = "chance";
     private static final String ACTION = "action";
-    private static final String ITEM = "item";
+    private static final String NAME = "name";
     private static final String TOOLTIP = "tooltip";
 
 
@@ -77,9 +73,11 @@ public class MySAXParser extends DefaultHandler {
         // if current element is book , create new book
         // clear tmpValue on start of element
 
+        if (elementName.equals(ACTIONS)) {
+            prozent = Integer.parseInt(attributes.getValue(CHANCE));
+        }
         if (elementName.equals(ACTION)) {
             tmpAction = new Action();
-            prozent = Integer.parseInt(attributes.getValue("prozent"));
         }
 
     }
@@ -98,7 +96,7 @@ public class MySAXParser extends DefaultHandler {
                     break;
             }
         }
-        if (element.equals(ITEM))
+        if (element.equals(NAME))
             tmpAction.setName(tmpValue);
         if (element.equals(TOOLTIP))
             tmpAction.setTooltip(tmpValue);
