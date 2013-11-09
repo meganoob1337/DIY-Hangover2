@@ -53,25 +53,15 @@ public class GameActivity extends ActionBarActivity {
         mCurrentUser.setText(mGame.getCurrentPlayer());
         if (mGame.getCurrentAction().hasTooltip()) {
             mBtnTooltip.setVisibility(View.VISIBLE);
-            //mBtnTooltip.setText("has tooltip");
         } else {
             mBtnTooltip.setVisibility(View.GONE);
-            //mBtnTooltip.setText("hasnt tooltip");
         }
     }
     private void startTooltip() {
-       /* Intent tooltip  = new Intent(this, TooltipActivity.class);
-        String b  = mGame.getCurrentAction().getTooltip();
-        // TODO ue bergeben vom tooltib  und dann wird er angezeigt ;D  
-      //  tooltip.putExtra("tooltip", mGame.getCurrentAction().getTooltip());
-         tooltip.putExtra("tooltip",b);
-                startActivity(tooltip);*/
         AlertDialog.Builder tooltip = new AlertDialog.Builder(this);
         tooltip.setMessage(mGame.getCurrentAction().getTooltip());
-        tooltip.setPositiveButton("Schließen", null);
+        tooltip.setCancelable(true);
         tooltip.show();
-
-        //Toast.makeText(this, mGame.getCurrentAction().getTooltip(), Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(View btn) {

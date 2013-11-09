@@ -3,7 +3,7 @@
     <actions chance="70">
         <action>
             <name>Rechts muss trinken!</name>
-            <tooltip>test</tooltip>
+            <tooltip></tooltip>
         </action>
         <action>
             <name>Links muss trinken!</name>

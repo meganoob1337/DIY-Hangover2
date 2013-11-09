@@ -67,7 +67,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void startGame() {
-        if (users.length() > 0) {
+        if (userList.size() > 0) {
             Intent game  = new Intent(this, GameActivity.class);
             game.putStringArrayListExtra("users", userList);
             startActivity(game);
