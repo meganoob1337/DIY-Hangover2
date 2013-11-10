@@ -19,15 +19,15 @@
         </action>
         <action>
             <name>Es wird 'Kategorie' gespielt!</name>
-            <tooltip>Der aktive Spieler nennt eine Kategorie. daraufhin muss man reihum etwas aus dieser Kategorie sagen , bis einer etwas doppelt sagt oder nichts mehr weis. z.B. Automarken</tooltip>
+            <tooltip>Der aktive Spieler nennt eine Kategorie. Daraufhin muss man reihum etwas aus dieser Kategorie sagen , bis einer etwas doppelt sagt oder nichts mehr weis. (z.B. Automarken)</tooltip>
         </action>
         <action>
             <name>Es wird 'Ich hab noch nie' gespielt!</name>
-            <tooltip>Der aktive Spieler sagt eine Sache die er noch nie bzw. schon mal gemacht hat, und alle Spieler in der Runde die die Sache schonmal gemacht haben, bzw noch nie, müssen trinken</tooltip>
+            <tooltip>Der aktive Spieler sagt eine Sache die er noch nie bzw. schon mal gemacht hat, und alle Spieler in der Runde die die Sache schonmal gemacht haben, bzw noch nie ,müssen trinken(Noch nie-> jeder trinkt der hatte und andersrum) </tooltip>
         </action>
         <action>
             <name>DAUMEN :)</name>
-            <tooltip>Der Aktive Spieler darf irgendwann den Daumen auf den Tisch legen , der Spieler der es ihm als letztes nachtut, muss trinken</tooltip>
+            <tooltip>Der Aktive Spieler darf irgendwann den Daumen auf den Tisch legen. Der Spieler der es ihm als letztes nachtut, muss trinken</tooltip>
         </action>
         <action>
             <name>Verteile drei Schlucke!</name>
@@ -50,7 +50,7 @@
             <tooltip></tooltip>
         </action>
         <action>
-            <name>Das geschlecht das am wenigsten vertreten, ist trinkt!</name>
+            <name>Das Geschlecht das am wenigsten vertreten ist, trinkt!</name>
             <tooltip></tooltip>
         </action>
         <action>
@@ -59,7 +59,7 @@
         </action>
         <action>
             <name>Stelle jemandem eine Frage, die er wahrheitsgemäß beantworten muss!</name>
-            <tooltip>Sollte der Spieler nicht antworten wollen, darf er alternativ auch sein Glas exen oder ein Kleidungsstück ausziehen</tooltip>
+            <tooltip>Sollte der Spieler nicht antworten wollen, darf er alternativ auch sein Glas exen, oder ein Kleidungsstück ausziehen</tooltip>
         </action>
         <action>
             <name>Du musst zwei Schlucke trinken!</name>
@@ -106,19 +106,19 @@
         </action>
         <action>
             <name>Es darf nicht mehr das Wort 'trinken' benutzt werden!</name>
-            <tooltip>Wer Trinken sagt, muss trinken</tooltip>
+            <tooltip>Wer "trinken" sagt, muss trinken</tooltip>
         </action>
         <action>
             <name>Es dürfen keine Namen mehr genannt werden!</name>
             <tooltip>Wer einen Namen sagt, muss trinken</tooltip>
         </action>
         <action>
-            <name>Imagninäres Männchen vor dem trinken Aktion +1</name>
+            <name>Imagninäres Männchen vor dem trinken. Aktion +1</name>
             <tooltip>Der Aktive Spieler denkt sich eine Aktion aus die man mit dem Imaginären Männchen machen muss bevor man einen Schluck trinkt.(z.B. Es auf das Glas setzen ) Wenn man es vergisst , bzw die Reihenfolge durcheinander bringt, muss man die Schlücke die man trinken musste, erneut nehmen</tooltip>
         </action>
         <action>
             <name>Es darf nichtmehr aufs Handy geguckt werden!</name>
-            <tooltip>Wer auf sein Handy guckt , muss Trinken. Ausser natürlich der Spieler der diese App auf seinem Handy hat, sollte er die App beenden bzw in den Hintergrund verschieben gilt diese Regel auch für ihn.</tooltip>
+            <tooltip>Wer auf sein Handy guckt , muss Trinken. (Ausser natürlich der Spieler der diese App auf seinem Handy hat, sollte er die App beenden bzw in den Hintergrund verschieben gilt diese Regel auch für ihn.)</tooltip>
         </action>
     </actions>
     <actions chance="10">
