@@ -82,7 +82,7 @@
     <actions chance="20">
         <action>
             <name>Suche dir einen Trinkpartner aus !</name>
-            <tooltip>Sobald man in einem Team mit jemandem ist, muss wenn jemand aus dem Team trinken muss , jedes Teammitglied die gleiche menge an Schlücken nehmen. Sollte man dazu gezwungen sein ein Team aus mehr als 3 Spielern zu bilden , darf man einen Spieler entfernen, so das maximal 3 Spieler zusammen im Team sind.</tooltip>
+            <tooltip>Sobald man in einem Team mit jemandem ist, muss wenn jemand aus dem Team trinken muss , jedes Teammitglied die gleiche menge an Schlucken nehmen. Sollte man dazu gezwungen sein ein Team aus mehr als 3 Spielern zu bilden , darf man einen Spieler entfernen, so das maximal 3 Spieler zusammen im Team sind.</tooltip>
         </action>
         <action>
             <name>Question-Master!</name>
@@ -114,11 +114,11 @@
         </action>
         <action>
             <name>Imagninäres Männchen vor dem trinken. Aktion +1</name>
-            <tooltip>Der Aktive Spieler denkt sich eine Aktion aus die man mit dem Imaginären Männchen machen muss bevor man einen Schluck trinkt.(z.B. Es auf das Glas setzen ) Wenn man es vergisst , bzw die Reihenfolge durcheinander bringt, muss man die Schlücke die man trinken musste, erneut nehmen</tooltip>
+            <tooltip>Der Aktive Spieler denkt sich eine Aktion aus die man mit dem Imaginären Männchen machen muss bevor man einen Schluck trinkt.(z.B. Es auf das Glas setzen ) Wenn man es vergisst , bzw die Reihenfolge durcheinander bringt, muss man die Schlucke die man trinken musste, erneut nehmen</tooltip>
         </action>
         <action>
             <name>Es darf nichtmehr aufs Handy geguckt werden!</name>
-            <tooltip>Wer auf sein Handy guckt , muss Trinken. (Ausser natürlich der Spieler der diese App auf seinem Handy hat, sollte er die App beenden bzw in den Hintergrund verschieben gilt diese Regel auch für ihn.)</tooltip>
+            <tooltip>Wer auf sein Handy guckt, muss Trinken. (Ausser natürlich der Spieler der diese App auf seinem Handy hat, sollte er die App beenden bzw in den Hintergrund verschieben gilt diese Regel auch für ihn.)</tooltip>
         </action>
     </actions>
     <actions chance="10">
