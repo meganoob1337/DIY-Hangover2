@@ -102,7 +102,7 @@
         </action>
         <action>
             <name>Erstelle eine Regel!</name>
-            <tooltip>Der Aktive Spieler darf eine Regel erstellen, bei deren nichteinhaltung getrunken werden muss</tooltip>
+            <tooltip>Der Aktive Spieler darf eine Regel erstellen, bei deren nichteinhaltung getrunken werden muss. Oder eine von einem Spieler erstellte Regel darf entfernt werden.</tooltip>
         </action>
         <action rule="true">
             <name>Es darf nicht mehr das Wort 'trinken' benutzt werden!</name>
