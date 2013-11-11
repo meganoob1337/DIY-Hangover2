@@ -2,6 +2,8 @@ package de.arnefeil.diyhangover;
 
 import android.util.Log;
 
+import org.apache.http.protocol.RequestUserAgent;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -75,7 +77,6 @@ public class Game {
     }
 
     public ArrayList<Rule> getActiveRules() {
-        if mActiveRules
         return mActiveRules;
     }
 
