@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <all-actions>
     <actions chance="70">
-        <action rule="true">
+        <action>
             <name>Rechts muss trinken!</name>
             <tooltip></tooltip>
         </action>
-        <action rule="true">
+        <action>
             <name>Links muss trinken!</name>
             <tooltip></tooltip>
         </action>
@@ -92,11 +92,11 @@
             <name>Snake-Master!</name>
             <tooltip>Der Aktive Spieler wird Snake-Master. Wenn ein Spieler ihm in die Augen guckt muss dieser Trinken.</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>kein 'JA' und 'NEIN' mehr sagen!</name>
             <tooltip>Wenn Ja oder Nein gesagt wird , muss der Spieler trinken</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Kein 'der', 'die', 'das' mehr :)</name>
             <tooltip>Beim benutzen eines Artikels muss der Spieler trinken.</tooltip>
         </action>
@@ -104,11 +104,11 @@
             <name>Erstelle eine Regel!</name>
             <tooltip>Der Aktive Spieler darf eine Regel erstellen, bei deren nichteinhaltung getrunken werden muss</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Es darf nicht mehr das Wort 'trinken' benutzt werden!</name>
             <tooltip>Wer "trinken" sagt, muss trinken</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Es dürfen keine Namen mehr genannt werden!</name>
             <tooltip>Wer einen Namen sagt, muss trinken</tooltip>
         </action>
