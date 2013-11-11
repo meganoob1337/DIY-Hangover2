@@ -70,9 +70,13 @@ public class GameActivity extends ActionBarActivity {
 
     private void startActiveRules() {
         AlertDialog.Builder rules = new AlertDialog.Builder(this);
-        ActiveRuleAdapter adapter = new ActiveRuleAdapter(this,
-                android.R.layout.simple_list_item_2, mGame.getActiveRules());
-        rules.setAdapter(adapter, null);
+        if (mGame.getActiveRules().size() == 0) {
+            rules.setMessage("Keine Regeln aktiv");
+        } else {
+            ActiveRuleAdapter adapter = new ActiveRuleAdapter(this,
+                    android.R.layout.simple_list_item_2, mGame.getActiveRules());
+            rules.setAdapter(adapter, null);
+        }
         rules.setCancelable(true);
         rules.setPositiveButton("Schließen", null);
         rules.show();
