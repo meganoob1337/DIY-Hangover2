@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class GameActivity extends ActionBarActivity {
 
@@ -22,6 +24,7 @@ public class GameActivity extends ActionBarActivity {
     private TextView mCurrentUser;
     private TextView mCurrentAction;
     private ImageView mBtnTooltip;
+
 
     //private TooltipActivity mTooltip;
 
@@ -65,6 +68,16 @@ public class GameActivity extends ActionBarActivity {
         tooltip.show();
     }
 
+    private void startActiveRules() {
+        AlertDialog.Builder rules = new AlertDialog.Builder(this);
+        ActiveRuleAdapter adapter = new ActiveRuleAdapter(this,
+                android.R.layout.simple_list_item_2, mGame.getActiveRules());
+        rules.setAdapter(adapter, null);
+        rules.setCancelable(true);
+        rules.setPositiveButton("Schließen", null);
+        rules.show();
+    }
+
     public void onClick(View btn) {
     switch(btn.getId())
         {
@@ -74,6 +87,9 @@ public class GameActivity extends ActionBarActivity {
                 break;
             case R.id.btn_tooltip:
                 startTooltip();
+                break;
+            case R.id.btn_show_rules:
+                startActiveRules();
                 break;
         }
 

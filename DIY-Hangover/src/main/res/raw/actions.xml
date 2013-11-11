@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <all-actions>
     <actions chance="70">
-        <action>
+        <action rule="true">
             <name>Rechts muss trinken!</name>
             <tooltip></tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Links muss trinken!</name>
             <tooltip></tooltip>
         </action>
@@ -88,8 +88,8 @@
             <name>Question-Master!</name>
             <tooltip>Der Aktive Spieler ist jetzt Question Master. Ihm dürfen keine Fragen mehr beantwortet werden, sonst muss man trinken. Wenn der Question Master eine Frage stellt , kann man "Fick dich Questionmaster" sagen um ihn Trinken zu lassen.</tooltip>
         </action>
-        <action>
-            <name rule="true">Snake-Master!</name>
+        <action rule="true">
+            <name>Snake-Master!</name>
             <tooltip>Der Aktive Spieler wird Snake-Master. Wenn ein Spieler ihm in die Augen guckt muss dieser Trinken.</tooltip>
         </action>
         <action>
@@ -112,7 +112,7 @@
             <name>Es dürfen keine Namen mehr genannt werden!</name>
             <tooltip>Wer einen Namen sagt, muss trinken</tooltip>
         </action>
-        <action rule="true">
+        <action>
             <name>Imagninäres Männchen vor dem trinken. Aktion +1</name>
             <tooltip>Der Aktive Spieler denkt sich eine Aktion aus die man mit dem Imaginären Männchen machen muss bevor man einen Schluck trinkt.(z.B. Es auf das Glas setzen ) Wenn man es vergisst , bzw die Reihenfolge durcheinander bringt, muss man die Schlucke die man trinken musste, erneut nehmen</tooltip>
         </action>

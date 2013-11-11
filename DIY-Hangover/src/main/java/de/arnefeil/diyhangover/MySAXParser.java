@@ -55,7 +55,6 @@ public class MySAXParser extends DefaultHandler {
     }
 
     private void parseDocument(InputStream xml) {
-        // parse
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser parser = factory.newSAXParser();
@@ -73,17 +72,13 @@ public class MySAXParser extends DefaultHandler {
 
     @Override
     public void startElement(String s, String s1, String elementName, Attributes attributes) throws SAXException {
-        // if current element is book , create new book
-        // clear tmpValue on start of element
-
         if (elementName.equals(ACTIONS)) {
             prozent = Integer.parseInt(attributes.getValue(CHANCE));
         }
         if (elementName.equals(ACTION)) {
             tmpAction = new Action();
-            tmpAction.setRule(attributes.getValue(RULE).equals("true"));
+            tmpAction.setRule(attributes.getValue(RULE) != null && attributes.getValue(RULE).equals("true"));
         }
-
     }
     @Override
     public void endElement(String s, String s1, String element) throws SAXException {
