@@ -6,6 +6,7 @@ import org.apache.http.protocol.RequestUserAgent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Game {
     private ArrayList<Action> mActions70;
     private ArrayList<Action> mActions20;
     private ArrayList<Action> mActions10;
-    private ArrayList<Rule> mActiveRules;
+    private HashSet<Rule> mActiveRules;
     private int mCurrentPlayer;
     private Action mCurrentAction;
 
@@ -32,7 +33,7 @@ public class Game {
         mActions70 = actions70;
         mActions20 = actions20;
         mActions10 = actions10;
-        mActiveRules = new ArrayList<Rule>();
+        mActiveRules = new HashSet<Rule>();
         mCurrentPlayer = -1;
         next();
     }
@@ -58,10 +59,13 @@ public class Game {
 
         mCurrentPlayer = (++mCurrentPlayer)%(mUsers.size());
         if (mCurrentAction.isRule()) {
-            mActiveRules.add(
-                    new Rule(mUsers.get(mCurrentPlayer), mCurrentAction)
-            );
-            Log.v("Game", "rule aktiviert");
+            String user = "";
+            if (mCurrentAction.getName().equals("Snake-Master!")
+                    || mCurrentAction.getName().equals("Question-Master!")) {
+                user = mUsers.get(mCurrentPlayer);
+            }
+            Rule rule = new Rule(user, mCurrentAction);
+            mActiveRules.add(rule);
         }
     }
 
@@ -77,7 +81,7 @@ public class Game {
     }
 
     public ArrayList<Rule> getActiveRules() {
-        return mActiveRules;
+        return new ArrayList<Rule>(mActiveRules);
     }
 
 }

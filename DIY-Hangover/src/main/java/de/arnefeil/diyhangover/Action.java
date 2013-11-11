@@ -39,4 +39,14 @@ public class Action {
     public boolean isRule() {
         return mRule;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        boolean result = false;
+        if (o instanceof Action) {
+            Action a = (Action) o;
+            result = a.getName().equals(this.getName());
+        }
+        return result;
+    }
 }
