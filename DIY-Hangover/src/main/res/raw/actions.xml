@@ -84,12 +84,12 @@
             <name>Suche dir einen Trinkpartner aus !</name>
             <tooltip>Sobald man in einem Team mit jemandem ist, muss wenn jemand aus dem Team trinken muss , jedes Teammitglied die gleiche menge an Schlucken nehmen. Sollte man dazu gezwungen sein ein Team aus mehr als 3 Spielern zu bilden , darf man einen Spieler entfernen, so das maximal 3 Spieler zusammen im Team sind.</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Question-Master!</name>
             <tooltip>Der Aktive Spieler ist jetzt Question Master. Ihm dürfen keine Fragen mehr beantwortet werden, sonst muss man trinken. Wenn der Question Master eine Frage stellt , kann man "Fick dich Questionmaster" sagen um ihn Trinken zu lassen.</tooltip>
         </action>
         <action>
-            <name>Snake-Master!</name>
+            <name rule="true">Snake-Master!</name>
             <tooltip>Der Aktive Spieler wird Snake-Master. Wenn ein Spieler ihm in die Augen guckt muss dieser Trinken.</tooltip>
         </action>
         <action>
@@ -112,11 +112,11 @@
             <name>Es dürfen keine Namen mehr genannt werden!</name>
             <tooltip>Wer einen Namen sagt, muss trinken</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Imagninäres Männchen vor dem trinken. Aktion +1</name>
             <tooltip>Der Aktive Spieler denkt sich eine Aktion aus die man mit dem Imaginären Männchen machen muss bevor man einen Schluck trinkt.(z.B. Es auf das Glas setzen ) Wenn man es vergisst , bzw die Reihenfolge durcheinander bringt, muss man die Schlucke die man trinken musste, erneut nehmen</tooltip>
         </action>
-        <action>
+        <action rule="true">
             <name>Es darf nichtmehr aufs Handy geguckt werden!</name>
             <tooltip>Wer auf sein Handy guckt, muss Trinken. (Ausser natürlich der Spieler der diese App auf seinem Handy hat, sollte er die App beenden bzw in den Hintergrund verschieben gilt diese Regel auch für ihn.)</tooltip>
         </action>

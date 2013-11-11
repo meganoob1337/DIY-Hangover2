@@ -1,5 +1,7 @@
 package de.arnefeil.diyhangover;
 
+import android.util.Log;
+
 import org.xml.sax.helpers.DefaultHandler;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +24,7 @@ public class MySAXParser extends DefaultHandler {
     private static final String ACTION = "action";
     private static final String NAME = "name";
     private static final String TOOLTIP = "tooltip";
+    private static final String RULE = "rule";
 
 
     private ArrayList<Action> mActionList70;
@@ -78,6 +81,7 @@ public class MySAXParser extends DefaultHandler {
         }
         if (elementName.equals(ACTION)) {
             tmpAction = new Action();
+            tmpAction.setRule(attributes.getValue(RULE).equals("true"));
         }
 
     }

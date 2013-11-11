@@ -6,6 +6,7 @@ package de.arnefeil.diyhangover;
 public class Action {
     private String mName;
     private String mTooltip;
+    private boolean mRule;
     private int mCounting;
 
     public void setName(String name) {
@@ -14,7 +15,9 @@ public class Action {
     public void setTooltip(String tooltip) {
         mTooltip = tooltip;
     }
-
+    public void setRule(boolean rule) {
+        mRule = rule;
+    }
 
     public void increaseCounting() {
         mCounting++;
@@ -32,5 +35,8 @@ public class Action {
     }
     public int getCounting() {
         return mCounting;
+    }
+    public boolean isRule() {
+        return mRule;
     }
 }
