@@ -58,14 +58,14 @@ public class Game {
             }
 
         mCurrentPlayer = (++mCurrentPlayer)%(mUsers.size());
-        if (mCurrentAction.isRule()) {
-            String user = "";
-            if (mCurrentAction.getName().equals("Snake-Master!")
-                    || mCurrentAction.getName().equals("Question-Master!")) {
-                user = mUsers.get(mCurrentPlayer);
+        if (mCurrentAction instanceof Rule) {
+            Log.v("Game", "isRule");
+            Rule r = (Rule) mCurrentAction;
+            if (r.isWithPlayer()) {
+                r.setUser(mUsers.get(mCurrentPlayer));
             }
-            Rule rule = new Rule(user, mCurrentAction);
-            mActiveRules.add(rule);
+            r.setActive(true);
+            mActiveRules.add(r);
         }
     }
 

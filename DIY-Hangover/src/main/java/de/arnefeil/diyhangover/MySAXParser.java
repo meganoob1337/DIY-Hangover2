@@ -25,6 +25,8 @@ public class MySAXParser extends DefaultHandler {
     private static final String NAME = "name";
     private static final String TOOLTIP = "tooltip";
     private static final String RULE = "rule";
+    private static final String WITH_PLAYER = "withPlayer";
+    private static final String WITHOUT_PLAYER = "withoutPlayer";
 
 
     private ArrayList<Action> mActionList70;
@@ -77,7 +79,18 @@ public class MySAXParser extends DefaultHandler {
         }
         if (elementName.equals(ACTION)) {
             tmpAction = new Action();
-            tmpAction.setRule(attributes.getValue(RULE) != null && attributes.getValue(RULE).equals("true"));
+            if (attributes.getValue(RULE) != null) {
+
+                if (attributes.getValue(RULE).equals(WITH_PLAYER)) {
+                    tmpAction = new Rule(true);
+                    Log.v("MySAXParser", "rule with player");
+                }
+                if (attributes.getValue(RULE).equals(WITHOUT_PLAYER)) {
+                    tmpAction = new Rule(false);
+                    Log.v("MySAXParser", "rule without player");
+                }
+
+            }
         }
     }
     @Override

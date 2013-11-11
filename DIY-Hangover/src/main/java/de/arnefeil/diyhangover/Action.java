@@ -4,19 +4,15 @@ package de.arnefeil.diyhangover;
  * Created by arne on 11/4/13.
  */
 public class Action {
-    private String mName;
-    private String mTooltip;
-    private boolean mRule;
-    private int mCounting;
+    protected String mName;
+    protected String mTooltip;
+    protected int mCounting;
 
     public void setName(String name) {
         mName = name;
     }
     public void setTooltip(String tooltip) {
         mTooltip = tooltip;
-    }
-    public void setRule(boolean rule) {
-        mRule = rule;
     }
 
     public void increaseCounting() {
@@ -35,9 +31,6 @@ public class Action {
     }
     public int getCounting() {
         return mCounting;
-    }
-    public boolean isRule() {
-        return mRule;
     }
 
     @Override

@@ -3,27 +3,44 @@ package de.arnefeil.diyhangover;
 /**
  * Created by arnefeil on 11.11.13.
  */
-public class Rule {
+public class Rule extends Action {
 
     private String mUser;
-    private Action mAction;
+    private boolean mWithPlayer;
+    private boolean mActive;
 
-    public Rule(String user, Action action) {
+    public Rule(boolean withPlayer) {
+        mUser = "";
+        mWithPlayer = withPlayer;
+        mActive = false;
+    }
+
+    public void setUser(String user) {
         mUser = user;
-        mAction = action;
+    }
+
+    public void setActive(boolean active) {
+        mActive = active;
     }
 
     public String getUser() {
         return mUser;
     }
 
-    public Action getAction() {
-        return mAction;
+    public boolean isActive() {
+        return mActive;
+    }
+
+    public boolean isWithPlayer() {
+        return mWithPlayer;
     }
 
     @Override
     public int hashCode() {
-        return (this.getUser().hashCode() + this.getAction().getName().hashCode()) % (Integer.MAX_VALUE-1);
+        int withPlayer = 0;
+        if (isWithPlayer())
+            withPlayer = 1;
+        return mName.hashCode() + withPlayer % (Integer.MAX_VALUE-1);
     }
 
     @Override
@@ -31,7 +48,7 @@ public class Rule {
         boolean result = false;
         if (o instanceof Rule) {
             Rule r = (Rule) o;
-            result = r.getUser().equals(this.getUser()) && r.getAction().getName().equals(this.getAction().getName());
+            result = mName.equals(r.getName()) && mWithPlayer == r.isWithPlayer();
         }
         return result;
     }

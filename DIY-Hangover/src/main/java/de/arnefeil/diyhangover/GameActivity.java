@@ -36,9 +36,6 @@ public class GameActivity extends ActionBarActivity {
         ArrayList<String> users = getIntent().getStringArrayListExtra("users");
         InputStream is = getResources().openRawResource(R.raw.actions);
         MySAXParser parser = new MySAXParser(is);
-        Log.v("GameActivity", ""+parser.getmActionList70().size());
-        Log.v("GameActivity", ""+parser.getmActionList20().size());
-        Log.v("GameActivity", ""+parser.getmActionList10().size());
         mGame = new Game(users, parser.getmActionList70(),
                 parser.getmActionList20(),
                 parser.getmActionList10());

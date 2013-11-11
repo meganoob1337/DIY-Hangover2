@@ -43,7 +43,7 @@ public class ActiveRuleAdapter extends ArrayAdapter<Rule> {
         }
 
         if (textfield2 != null) {
-            textfield2.setText(rule.getAction().getName());
+            textfield2.setText(rule.getName());
         }
 
         return v;
