@@ -59,9 +59,11 @@ public class Game {
 
         mCurrentPlayer = (++mCurrentPlayer)%(mUsers.size());
         if (mCurrentAction instanceof Rule) {
-            Log.v("Game", "isRule");
             Rule r = (Rule) mCurrentAction;
             if (r.isWithPlayer()) {
+                if (mActiveRules.contains(r)) {
+                    mActiveRules.remove(r);
+                }
                 r.setUser(mUsers.get(mCurrentPlayer));
             }
             r.setActive(true);
