@@ -86,4 +86,9 @@ public class Game {
         return new ArrayList<Rule>(mActiveRules);
     }
 
+    public int getCountUser()
+    {
+        return mUsers.size();
+    }
+
 }

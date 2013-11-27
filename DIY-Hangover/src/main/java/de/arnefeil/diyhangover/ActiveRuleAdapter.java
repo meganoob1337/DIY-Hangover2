@@ -1,5 +1,6 @@
 package de.arnefeil.diyhangover;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +37,7 @@ public class ActiveRuleAdapter extends ArrayAdapter<Rule> {
         TextView textfield1 = (TextView) v.findViewById(android.R.id.text2);
         TextView textfield2 = (TextView) v.findViewById(android.R.id.text1);
 
-        Rule rule = mRules.get(position);
+        final Rule rule = mRules.get(position);
 
         if (textfield1 != null) {
             textfield1.setText(rule.getUser());
@@ -44,6 +45,19 @@ public class ActiveRuleAdapter extends ArrayAdapter<Rule> {
 
         if (textfield2 != null) {
             textfield2.setText(rule.getName());
+        }
+
+        if (rule.hasTooltip()) {
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog.Builder d = new AlertDialog.Builder(mContext);
+                    d.setMessage(rule.getTooltip());
+                    d.setCancelable(true);
+                    d.setPositiveButton("Schließen", null);
+                    d.show();
+                }
+            });
         }
 
         return v;

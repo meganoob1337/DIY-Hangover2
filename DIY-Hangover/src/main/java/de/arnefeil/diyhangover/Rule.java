@@ -8,11 +8,13 @@ public class Rule extends Action {
     private String mUser;
     private boolean mWithPlayer;
     private boolean mActive;
+    private boolean mVisible;
 
     public Rule(boolean withPlayer) {
         mUser = "";
         mWithPlayer = withPlayer;
         mActive = false;
+        mVisible = false;
     }
 
     public void setUser(String user) {
@@ -22,6 +24,12 @@ public class Rule extends Action {
     public void setActive(boolean active) {
         mActive = active;
     }
+
+    public void setVisible(boolean visible)
+    {
+        mVisible = visible;
+    }
+
 
     public String getUser() {
         return mUser;
@@ -35,6 +43,10 @@ public class Rule extends Action {
         return mWithPlayer;
     }
 
+    public boolean isVisible()
+    {
+        return mVisible;
+    }
     @Override
     public int hashCode() {
         int withPlayer = 0;

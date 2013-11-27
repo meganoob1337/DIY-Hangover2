@@ -27,14 +27,6 @@
         android:layout_below="@+id/et_name"
         android:layout_gravity="center_horizontal" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Spiel starten"
-        android:id="@+id/btn_start"
-        android:onClick="onClick"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -43,6 +35,6 @@
         android:dividerHeight="0px"
         android:id="@+id/lv_users"
         android:layout_below="@+id/btn_add"
-        android:layout_above="@+id/btn_start"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true" />
 </RelativeLayout>

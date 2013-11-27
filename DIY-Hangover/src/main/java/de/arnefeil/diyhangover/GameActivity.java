@@ -1,32 +1,33 @@
 package de.arnefeil.diyhangover;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Map;
 
 public class GameActivity extends ActionBarActivity {
 
     private Game mGame;
+
+    //private ViewPager mViewPager;
+    //private ActionPageAdapter mActionPageAdapter;
     private TextView mCurrentUser;
     private TextView mCurrentAction;
     private ImageView mBtnTooltip;
 
+    private View mPager;
 
-    //private TooltipActivity mTooltip;
+    private Animation mMoveOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +41,56 @@ public class GameActivity extends ActionBarActivity {
                 parser.getmActionList20(),
                 parser.getmActionList10());
 
+        mMoveOut = AnimationUtils.loadAnimation(this, R.anim.move_out);
+        mMoveOut.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                updateView();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        mPager = findViewById(R.id.main_view);
+        mPager.setOnTouchListener(new View.OnTouchListener() {
+            float lastX;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    Log.v("scroll", "down");
+                    lastX = event.getX();
+                }
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    Log.v("scroll", "up lastX: " + lastX + " getX: " + event.getX());
+                    if (lastX > event.getX()) {
+                        mGame.next();
+                        startAnimatedUpdateView();
+                    }
+                }
+                return true;
+            }
+        });
 
         mCurrentUser = (TextView) findViewById(R.id.tv_user);
         mCurrentAction = (TextView) findViewById(R.id.tv_action);
         mBtnTooltip = (ImageView) findViewById(R.id.btn_tooltip);
 
         updateView();
+
+
+    }
+
+    private void startAnimatedUpdateView() {
+        mPager.startAnimation(mMoveOut);
     }
 
     public void updateView() {
@@ -82,10 +127,6 @@ public class GameActivity extends ActionBarActivity {
     public void onClick(View btn) {
     switch(btn.getId())
         {
-            case R.id.button:
-                mGame.next();
-                updateView();
-                break;
             case R.id.btn_tooltip:
                 startTooltip();
                 break;
@@ -109,4 +150,6 @@ public class GameActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
+
+  }
+
