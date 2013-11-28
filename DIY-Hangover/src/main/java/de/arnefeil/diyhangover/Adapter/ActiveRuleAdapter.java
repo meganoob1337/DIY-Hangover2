@@ -1,4 +1,4 @@
-package de.arnefeil.diyhangover;
+package de.arnefeil.diyhangover.Adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,7 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+
+import de.arnefeil.diyhangover.Game.Rule;
 
 /**
  * Created by arnefeil on 11.11.13.

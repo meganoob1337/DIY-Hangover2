@@ -1,4 +1,4 @@
-package de.arnefeil.diyhangover;
+package de.arnefeil.diyhangover.Game;
 
 /**
  * Created by arne on 11/4/13.

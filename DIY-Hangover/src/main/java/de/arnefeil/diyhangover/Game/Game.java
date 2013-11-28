@@ -1,15 +1,8 @@
-package de.arnefeil.diyhangover;
-
-import android.util.Log;
-
-import org.apache.http.protocol.RequestUserAgent;
+package de.arnefeil.diyhangover.Game;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Random;
-import java.util.List;
 
 
 /**

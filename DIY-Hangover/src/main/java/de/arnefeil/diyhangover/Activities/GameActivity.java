@@ -1,5 +1,6 @@
-package de.arnefeil.diyhangover;
+package de.arnefeil.diyhangover.Activities;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -7,13 +8,20 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+
+import de.arnefeil.diyhangover.Adapter.ActiveRuleAdapter;
+import de.arnefeil.diyhangover.Game.Game;
+import de.arnefeil.diyhangover.Tools.MySAXParser;
+import de.arnefeil.diyhangover.R;
 
 public class GameActivity extends ActionBarActivity {
 
@@ -61,20 +69,30 @@ public class GameActivity extends ActionBarActivity {
 
         mPager = findViewById(R.id.main_view);
         mPager.setOnTouchListener(new View.OnTouchListener() {
-            float lastX;
+            int startX;
+            int lastX;
+
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    Log.v("scroll", "down");
-                    lastX = event.getX();
-                }
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    Log.v("scroll", "up lastX: " + lastX + " getX: " + event.getX());
-                    if (lastX > event.getX()) {
-                        mGame.next();
-                        startAnimatedUpdateView();
-                    }
+                int currentX = (int) event.getRawX();
+                switch (event.getAction())
+                {
+                    case MotionEvent.ACTION_DOWN:
+                        startX = currentX;
+                        lastX = currentX;
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        int delta = currentX - lastX;
+                        v.setLeft(delta);
+                        return true;
+                    case MotionEvent.ACTION_UP:
+                        if (startX > currentX)
+                        {
+                            mGame.next();
+                            startAnimatedUpdateView();
+                        }
+                        break;
                 }
                 return true;
             }

@@ -1,4 +1,4 @@
-package de.arnefeil.diyhangover;
+package de.arnefeil.diyhangover.Tools;
 
 import android.util.Log;
 
@@ -13,6 +13,9 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+
+import de.arnefeil.diyhangover.Game.Action;
+import de.arnefeil.diyhangover.Game.Rule;
 
 /**
  * Created by arnefeil on 07.11.13.

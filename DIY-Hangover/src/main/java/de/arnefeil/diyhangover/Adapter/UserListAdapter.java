@@ -1,4 +1,4 @@
-package de.arnefeil.diyhangover;
+package de.arnefeil.diyhangover.Adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import de.arnefeil.diyhangover.R;
 
 /**
  * Created by arnefeil on 09.11.13.

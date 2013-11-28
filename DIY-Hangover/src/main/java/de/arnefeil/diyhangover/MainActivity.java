@@ -1,21 +1,21 @@
 package de.arnefeil.diyhangover;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.InputStream;
 import java.util.ArrayList;
+
+import de.arnefeil.diyhangover.Activities.GameActivity;
+import de.arnefeil.diyhangover.Adapter.UserListAdapter;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -35,12 +35,12 @@ public class MainActivity extends ActionBarActivity {
         lv_users = (ListView) findViewById(R.id.lv_users);
         lv_users.setAdapter(mAdapter);
         // Testgame start //
-        /*userList.add("Test 1");
+        userList.add("Test 1");
         userList.add("Test 2");
         userList.add("Test 3");
         userList.add("Test 4");
 
-        startGame();*/
+        startGame();
     }
 
 
@@ -74,7 +74,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addSpieler() {
-        if (!userName.getText().toString().equals(""))
+        if (userList.contains(userName.getText().toString()))
+        {
+            userName.setError("Spieler schon vorhanden");
+        } else if (!userName.getText().toString().equals(""))
         {   userName.setError(null);
             userList.add(userName.getText().toString());
             updateView();
@@ -82,7 +85,8 @@ public class MainActivity extends ActionBarActivity {
             userName.setError(getString(R.string.error_no_name));
         }
 
-
+        InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
 
     }
 
