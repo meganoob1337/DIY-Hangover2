@@ -36,9 +36,9 @@ public class MainActivity extends ActionBarActivity {
         lv_users.setAdapter(mAdapter);
         // Testgame start //
         userList.add("Test 1");
-        userList.add("Test 2");
-        userList.add("Test 3");
-        userList.add("Test 4");
+        //userList.add("Test 2");
+        //userList.add("Test 3");
+        //userList.add("Test 4");
 
         startGame();
     }

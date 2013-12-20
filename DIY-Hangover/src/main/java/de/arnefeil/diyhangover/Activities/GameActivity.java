@@ -84,7 +84,8 @@ public class GameActivity extends ActionBarActivity {
                         break;
                     case MotionEvent.ACTION_MOVE:
                         int delta = currentX - lastX;
-                        v.setLeft(delta);
+                        if (delta < 0)
+                            v.setLeft(delta);
                         return true;
                     case MotionEvent.ACTION_UP:
                         if (startX > currentX)

@@ -64,4 +64,9 @@ public class Rule extends Action {
         }
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "User: " + mUser + ", Rule: " + mName;
+    }
 }

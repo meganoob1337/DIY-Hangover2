@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<all-actions>
+    <actions chance="70">
+        <action rule="withPlayer">
+            <name>Snake-Master!</name>
+            <tooltip>Der Aktive Spieler wird Snake-Master. Wenn ein Spieler ihm in die Augen guckt muss dieser Trinken.</tooltip>
+        </action>
+        <action rule="withoutPlayer">
+            <name>BLAA</name>
+            <tooltip>Sobald man in einem Team mit jemandem ist, muss wenn jemand aus dem Team trinken muss , jedes Teammitglied die gleiche menge an Schlucken nehmen. Sollte man dazu gezwungen sein ein Team aus mehr als 3 Spielern zu bilden , darf man einen Spieler entfernen, so das maximal 3 Spieler zusammen im Team sind.</tooltip>
+        </action>
+    </actions>
+    <actions chance="20">
+        <action>
+            <name>Suche dir einen Trinkpartner aus !</name>
+            <tooltip>Sobald man in einem Team mit jemandem ist, muss wenn jemand aus dem Team trinken muss , jedes Teammitglied die gleiche menge an Schlucken nehmen. Sollte man dazu gezwungen sein ein Team aus mehr als 3 Spielern zu bilden , darf man einen Spieler entfernen, so das maximal 3 Spieler zusammen im Team sind.</tooltip>
+        </action>
+    </actions>
+    <actions chance="10">
+        <action>
+            <name>Solltest du Graß haben -> Baue einen</name>
+            <tooltip></tooltip>
+        </action>
+    </actions>
+</all-actions>
